@@ -4,7 +4,7 @@ from datetime import datetime
 allTrend = [[],[],[],[],[],[],[],[]]
 count = 0
 
-file = open("googleTRENDING.txt", "r")
+file = open("googleTRENDING.txt", "w")
 
 for line in file:
     allTrend[count] = line.split(',')
