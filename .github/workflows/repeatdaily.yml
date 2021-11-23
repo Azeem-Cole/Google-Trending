@@ -18,7 +18,7 @@ jobs:
     
     - name: Set up Python 3.7
       uses: actions/setup-python@v2
-
+      
       with:
         python-version: 3.7
         
@@ -34,24 +34,32 @@ jobs:
         python ${{ env.DEVOPS_DIR }}/google/googleSCRAPE/googleGET.py
         python ${{ env.DEVOPS_DIR }}/google/googleSCRAPE/googlePARSE.py
         
-  
-  upload_job:
-   
-    runs-on: windows-latest
-    needs: [GET]
-    name: Upload
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        # Setup node first
-      - name: Setup node
-        uses: actions/setup-node@v1
-      - name: Upload to GitHub
-        uses: LasyIsLazy/github-upload-action@v0.1.0
-        with:
-          access-token: ${{ secrets.ACCESS_TOKEN }}
-          file-path: google
-          owner: Azeeem-Cole
-          repo: Google-Trending
-          remote-dir: remoteDir
         
+
+    - run: echo hello > path/to/artifact/world.txt
+
+    - uses: actions/upload-artifact@v2
+      with:
+        name: my-artifact
+        path: google/Yr2021 mth11 day23.txt
+    
+  #upload_job:
+   
+  #  runs-on: windows-latest
+  #  needs: [GET]
+  #  name: Upload
+  #  steps:
+  #    - name: Checkout
+  #      uses: actions/checkout@v2
+  #      # Setup node first
+  #    - name: Setup node
+  #      uses: actions/setup-node@v1
+  #    - name: Upload to GitHub
+  #      uses: svenstaro/upload-release-action@v2
+  #      with:
+  #        repo-token: ${{ secrets.GITHUB_TOKEN }}
+  #        file: google
+  #        owner: Azeeem-Cole
+  #        repo: Google-Trending
+  #        remote-dir: remoteDir
+  #      
