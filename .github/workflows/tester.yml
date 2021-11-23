@@ -10,15 +10,30 @@ jobs:
     runs-on: windows-latest
     
     steps:
-    - uses: actions/checkout@v2
-      with:
-        repository: Azeem-Cole/Google-Trending
-        token: ${{ secrets.GITHUB_TOKEN }}
-        path: ${{ env.DEVOPS_DIR }}
-    
-    - run: echo hello > ${{ env.DEVOPS_DIR }}/google/Yr2021.txt
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          repository: Azeem-Cole/Google-Trending
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: ${{ env.DEVOPS_DIR }}
+          
+        # Setup node first
+      - name: Setup node
+        uses: actions/setup-node@v1
+      - name: Upload to GitHub
+        uses: LasyIsLazy/github-upload-action@v0.1.0
+        with:
+          access-token: ${{ secrets.GITHUB }}
+          file-path:  ${{ env.DEVOPS_DIR }}/google/googleSCRAPE/googleTRENDING.txt
+          owner: Azeem-Cole
+          repo: ${{ env.DEVOPS_DIR }}
+          remote-dir: ${{ env.DEVOPS_DIR }}/google
 
-    - uses: actions/upload-artifact@v2
-      with:
-        name: File to upload
-        path: ${{ env.DEVOPS_DIR }}/google
+    
+  #  - run: echo hello > ${{ env.DEVOPS_DIR }}/google/Yr2021.txt
+
+#    - uses: actions/upload-artifact@v2
+    #  with:
+     
+#   name: File to upload
+ #       path: ${{ env.DEVOPS_DIR }}/google
