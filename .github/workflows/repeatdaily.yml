@@ -32,4 +32,26 @@ jobs:
     - name: call file
       run: |
         python ${{ env.DEVOPS_DIR }}/google/googleSCRAPE/googleGET.py
+        python ${{ env.DEVOPS_DIR }}/google/googleSCRAPE/googlePARSE.py
+        
+  
+  upload_job:
+   
+    runs-on: windows-latest
+    needs: [GET]
+    name: Upload
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        # Setup node first
+      - name: Setup node
+        uses: actions/setup-node@v1
+      - name: Upload to GitHub
+        uses: LasyIsLazy/github-upload-action@v0.1.0
+        with:
+          access-token: ${{ secrets.ACCESS_TOKEN }}
+          file-path: localPath
+          owner: Azeeem-Cole
+          repo: Google-Trending
+          remote-dir: remoteDir
         
