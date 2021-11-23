@@ -18,7 +18,7 @@ allcountry = [us, india, philippines, nigeria, uk, germany, canada, australia]
 allcountrySTR = ["united states", "india", "philippines", "nigeria", "united kingdom", "germany", "canada", "australia"]
 
 count = 0 
-fileTREND = open("googleSCRAPE/googleTRENDING.txt","w")
+fileTREND = open("Google-Trending/google/googleSCRAPE/googleTRENDING.txt","w")
 
 for each in allcountry:
 
