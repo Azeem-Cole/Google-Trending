@@ -6,9 +6,16 @@ on:
     - cron: '*/10 * * * *'
 jobs:
   build:
+    name: Lint
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
     - name: Running
       run: |
         echo "Running!"
+        
+    - name: Run Super-Linter
+      uses: github/super-linter@v3
+      env:
+        DEFAULT_BRANCH: test1
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
