@@ -1,7 +1,0 @@
-name: Repeat Daily
-
-on: [push]
-
-jobs:
-  build repeat:
-    
