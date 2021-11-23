@@ -26,7 +26,7 @@ jobs:
       with:
         repository: Azeem-Cole/Google-Trending
     
-      - run: google/googleSCRAPE/googleGET.py
+      - run: google/googleSCRAPE/googlePARSE.py
       
       # Runs a single command using the runners shell
       - name: Run a one-line script
