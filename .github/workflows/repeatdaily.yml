@@ -31,7 +31,7 @@ jobs:
         
     - name: call file
       run: |
-        python ${{ env.DEVOPS_DIR }}/google//googleSRAPE/googleGET.py
+        python ${{ env.DEVOPS_DIR }}/google//googleSRAPE/googleGET_test.py
     
  
  
