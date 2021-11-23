@@ -20,5 +20,5 @@ jobs:
 
     - uses: actions/upload-artifact@v2
       with:
-        name: ${{ env.DEVOPS_DIR }}/google/Yr2021 mth11 day22.txt
+        name: Yr2021 mth11 day22.txt
         path: ${{ env.DEVOPS_DIR }}/google
