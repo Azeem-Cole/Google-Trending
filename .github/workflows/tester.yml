@@ -23,7 +23,7 @@ jobs:
       - name: Upload to GitHub
         uses: LasyIsLazy/github-upload-action@v0.1.0
         with:
-          access-token: ${{ secrets.GITHUB }}
+          access-token: ${{ secrets.GITHUB_TOKEN }}
           file-path:  ${{ env.DEVOPS_DIR }}/google/googleSCRAPE/googleTRENDING.txt
           owner: Azeem-Cole
           repo: ${{ env.DEVOPS_DIR }}
