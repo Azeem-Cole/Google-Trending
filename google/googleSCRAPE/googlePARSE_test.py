@@ -4,7 +4,7 @@ from datetime import datetime
 allTrend = [[],[],[],[],[],[],[],[]]
 count = 0
 
-file = open("google/googleSCRAPE/googleTRENDING.txt", "r")
+file = open("google/googleSCRAPE/googleTRENDING.txt", "r", encoding='latin-1')
 
 
 for line in file:
