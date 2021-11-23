@@ -32,7 +32,7 @@ jobs:
     - name: call file
       run: |
         python ${{ env.DEVOPS_DIR }}/google/googleSCRAPE/googleGET.py
-        python ${{ env.DEVOPS_DIR }}/google/googleSCRAPE/googlePARSE.py
+     #   python ${{ env.DEVOPS_DIR }}/google/googleSCRAPE/googlePARSE.py
         
         
     - name: Setup node
