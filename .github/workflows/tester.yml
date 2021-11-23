@@ -20,5 +20,5 @@ jobs:
 
     - uses: actions/upload-artifact@v2
       with:
-        name: Yr2021.txt
+        name: File to upload
         path: ${{ env.DEVOPS_DIR }}/google
