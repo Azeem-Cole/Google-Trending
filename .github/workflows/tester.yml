@@ -16,9 +16,9 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
         path: ${{ env.DEVOPS_DIR }}
     
-    - run: echo hello > ${{ env.DEVOPS_DIR }}/google/Yr2021 mth11 day22.txt
+    - run: echo hello > ${{ env.DEVOPS_DIR }}/google/Yr2021.txt
 
     - uses: actions/upload-artifact@v2
       with:
-        name: Yr2021 mth11 day22.txt
+        name: Yr2021.txt
         path: ${{ env.DEVOPS_DIR }}/google
