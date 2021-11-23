@@ -50,7 +50,7 @@ jobs:
         uses: LasyIsLazy/github-upload-action@v0.1.0
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
-          file-path: localPath
+          file-path: google
           owner: Azeeem-Cole
           repo: Google-Trending
           remote-dir: remoteDir
