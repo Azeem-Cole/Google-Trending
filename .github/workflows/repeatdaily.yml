@@ -10,7 +10,8 @@ jobs:
     runs-on: windows-latest
     
     steps:
-    - uses: actions/checkout@v2
+    - name: checkout
+      uses: actions/checkout@v2
       with:
         repository: Azeem-Cole/Google-Trending
         token: ${{ secrets.GITHUB_TOKEN }}
@@ -18,7 +19,6 @@ jobs:
     
     - name: Set up Python 3.7
       uses: actions/setup-python@v2
-      
       with:
         python-version: 3.7
         
@@ -37,6 +37,7 @@ jobs:
         
     - name: Setup node
       uses: actions/setup-node@v1
+      
     - name: Upload to GitHub
       uses: LasyIsLazy/github-upload-action@v0.1.0
       with:
