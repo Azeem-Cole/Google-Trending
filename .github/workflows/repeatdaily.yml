@@ -1,6 +1,6 @@
 name: CI
 
-#on: [push, workflow_dispatch]
+on: [push, workflow_dispatch]
 
 env:
   DEVOPS_DIR: Google-Trending
@@ -35,13 +35,17 @@ jobs:
         python ${{ env.DEVOPS_DIR }}/google/googleSCRAPE/googlePARSE.py
         
         
-
-    - run: echo hello > path/to/artifact/world.txt
-
-    - uses: actions/upload-artifact@v2
+    - name: Setup node
+      uses: actions/setup-node@v1
+    - name: Upload to GitHub
+      uses: LasyIsLazy/github-upload-action@v0.1.0
       with:
-        name: my-artifact
-        path: google/Yr2021 mth11 day23.txt
+        access-token: ${{ secrets.GITHUB_TOKEN }}
+        file-path:  ${{ env.DEVOPS_DIR }}/google/Yr2021 mth11 day23.txt
+        owner: Azeem-Cole
+        repo: ${{ env.DEVOPS_DIR }}
+        branch-name: Azeem-Cole-patch-1
+
     
   #upload_job:
    
