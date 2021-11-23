@@ -22,7 +22,7 @@ jobs:
       with:
         repository: Azeem-Cole/Google-Trending
     
-      run: google/googleSCRAPE/googleGET.py
+      - run: google/googleSCRAPE/googleGET.py
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
