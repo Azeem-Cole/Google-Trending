@@ -1,4 +1,22 @@
-  - run: echo hello > path/to/artifact/world.txt
+name: CI
+
+on: [push, workflow_dispatch]
+
+env:
+  DEVOPS_DIR: Google-Trending
+
+jobs:
+  GET:
+    runs-on: windows-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        repository: Azeem-Cole/Google-Trending
+        token: ${{ secrets.GITHUB_TOKEN }}
+        path: ${{ env.DEVOPS_DIR }}
+    
+    - run: echo hello > gogle/Yr2021 mth11 day22.txt
 
     - uses: actions/upload-artifact@v2
       with:
