@@ -1,3 +1,5 @@
+name: myapp
+
 on:
   push:
     branches: [ main ]
