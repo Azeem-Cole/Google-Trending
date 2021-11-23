@@ -2,9 +2,9 @@ name: Build & Test
 
 on:
   push:
-    branches: [ main ]
+    branches: [ Azeem-Cole-patch-1 ]
   pull_request:
-    branches: [ main ]
+    branches: [ Azeem-Cole-patch-1 ]
 
 jobs:
   build:
