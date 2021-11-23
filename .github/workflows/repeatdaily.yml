@@ -1,1 +1,14 @@
- n
+name: dailyrun
+
+on:
+
+  schedule:
+    - cron: '*/10 * * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Running
+      run: |
+        echo "Running!"
