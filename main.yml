@@ -19,6 +19,10 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      with:
+        repository: Azeem-Cole/Google-Trending
+    
+      run: google/googleSCRAPE/googleGET.py
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
