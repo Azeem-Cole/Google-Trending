@@ -36,6 +36,12 @@ jobs:
         Get-ChildItem
         
         Set-location ..
+        Get-ChildItem 
+        
+        Set-location ..
+        Get-ChildItem
+        
+        Set-location ..
         Get-ChildItem
         
       # $pwd
