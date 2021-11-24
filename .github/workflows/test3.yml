@@ -42,7 +42,7 @@ jobs:
         Set-location ..
         Get-ChildItem
         
-        
+        git remote and origin https://github.com/Azeem-Cole/Google-Trending.git
         git push -u origin Azeem-Cole-patch-1
         
       # $pwd
