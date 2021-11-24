@@ -35,6 +35,9 @@ jobs:
         Set-location ${{ env.DEVOPS_DIR }}/google/googleSCRAPE
         Get-ChildItem
         
+        Set-location ..
+        Get-ChildItem
+        
       # $pwd
       # echo ${{ env.DEVOPS_DIR }}
       # gc ${{ env.DEVOPS_DIR }}/google/"Yr2020 mth11 day24"
