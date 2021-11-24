@@ -26,7 +26,7 @@ jobs:
           access-token: ${{ secrets.GITHUB_TOKEN }}
           file-path: ${{ env.DEVOPS_DIR }}/google/googleSCRAPE/googleTRENDING.txt
           owner: Azeem-Cole
-          repo: ${{ env.DEVOPS_DIR }}/google
+          repo: ${{ env.DEVOPS_DIR }}
           branch-name: Azeem-Cole-patch-1
 
     
