@@ -32,7 +32,7 @@ jobs:
       run: |
         python ${{ env.DEVOPS_DIR }}/google/googleSCRAPE/googleGET.py
         echo ${{ env.DEVOPS_DIR }}
-        Set-Location ${{ env.DEVOPS_DIR }}
+        Set-Location ..
         $pwd
         gc google/"Yr2020 mth11 day09.txt"
       # Get-ChildItem
