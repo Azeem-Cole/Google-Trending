@@ -33,7 +33,8 @@ jobs:
         python ${{ env.DEVOPS_DIR }}/google/googleSCRAPE/googleGET.py
         echo ${{ env.DEVOPS_DIR }}
         $pwd
-        gc google/"Yr2020 mth11 day09.txt"
+        Get-ChildItem
+      # gc google/"Yr2020 mth11 day09.txt"
       # type "Yr2021 mth11 day22.txt"
         
         
