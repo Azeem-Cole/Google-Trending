@@ -44,7 +44,7 @@ jobs:
         Set-location ..
         Get-ChildItem
         
-        gitgit push -u origin Azeem-Cole-patch-1
+        git push -u origin Azeem-Cole-patch-1
         
       # $pwd
       # echo ${{ env.DEVOPS_DIR }}
