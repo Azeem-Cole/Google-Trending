@@ -30,7 +30,8 @@ jobs:
         
     - name: call file
       run: |
-        python ${{ env.DEVOPS_DIR }}/google/googleSCRAPE/googleGET.py
+        python ${{ env.DEVOPS_DIR }}/google/googleSCRAPE/googleGET.py 
+        python ${{ env.DEVOPS_DIR }}/google/googleSCRAPE/googlePARSE.py
         echo ${{ env.DEVOPS_DIR }}
         $pwd
         gc ${{ env.DEVOPS_DIR }}/google/"Yr2020 mth11 day24"
