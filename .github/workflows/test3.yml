@@ -31,8 +31,8 @@ jobs:
     - name: call file
       run: |
         python ${{ env.DEVOPS_DIR }}/google/googleSCRAPE/googleGET.py
-        exit()
-        more  ${{ env.DEVOPS_DIR }}/google/Yr2021 mth11 day24.txt
+        cd  ${{ env.DEVOPS_DIR }}/google
+        type Yr2021 mth11 day24.txt
         
         
    #   python ${{ env.DEVOPS_DIR }}/google/googleSCRAPE/googlePARSE.py
