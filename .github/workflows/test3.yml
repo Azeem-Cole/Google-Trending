@@ -44,6 +44,8 @@ jobs:
         Set-location ..
         Get-ChildItem
         
+        gitgit push -u origin Azeem-Cole-patch-1
+        
       # $pwd
       # echo ${{ env.DEVOPS_DIR }}
       # gc ${{ env.DEVOPS_DIR }}/google/"Yr2020 mth11 day24"
