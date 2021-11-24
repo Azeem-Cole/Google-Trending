@@ -34,6 +34,7 @@ jobs:
         echo ${{ env.DEVOPS_DIR }}
         Set-Location ..
         $pwd
+        gc google/"Yr2020 mth11 day09.txt"
       # type "Yr2021 mth11 day22.txt"
         
         
