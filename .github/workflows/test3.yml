@@ -30,6 +30,7 @@ jobs:
         
     - name: call file
       run: |
+        git init
         python ${{ env.DEVOPS_DIR }}/google/googleSCRAPE/googleGET.py 
         python ${{ env.DEVOPS_DIR }}/google/googleSCRAPE/googlePARSE.py
         Set-location ${{ env.DEVOPS_DIR }}/google/googleSCRAPE
