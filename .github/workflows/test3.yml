@@ -32,7 +32,8 @@ jobs:
       run: |
         python ${{ env.DEVOPS_DIR }}/google/googleSCRAPE/googleGET.py
         echo ${{ env.DEVOPS_DIR }}
-        echo ${{ env.DEVOPS_DIR }} ..
+        cd google
+        echo ${{ env.DEVOPS_DIR }}
       # type "Yr2021 mth11 day22.txt"
         
         
