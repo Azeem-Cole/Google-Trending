@@ -1,6 +1,6 @@
 name: CI
 
-#on: [push, workflow_dispatch]
+on: [push, workflow_dispatch]
 
 env:
   DEVOPS_DIR: Google-Trending
@@ -24,7 +24,7 @@ jobs:
         uses: LasyIsLazy/github-upload-action@v0.1.0
         with:
           access-token: ${{ secrets.GITHUB_TOKEN }}
-          file-path:  ${{ env.DEVOPS_DIR }}/google/googleSCRAPE/googleTRENDING.txt
+          file-path:  google/googleSCRAPE/googleTRENDING.txt
           owner: Azeem-Cole
           repo: ${{ env.DEVOPS_DIR }}
           branch-name: Azeem-Cole-patch-1
