@@ -27,7 +27,7 @@ jobs:
           file-path: ${{ env.DEVOPS_DIR }}/google/googleSCRAPE/googleTRENDING.txt
           owner: Azeem-Cole
           repo: ${{ env.DEVOPS_DIR }}
-          remote-dir: ${{ env.DEVOPS_DIR }}/google
+          remote-dir: ${{ env.DEVOPS_DIR }}xgoogle
           branch-name: Azeem-Cole-patch-1
 
     
