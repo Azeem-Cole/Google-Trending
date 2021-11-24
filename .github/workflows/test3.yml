@@ -25,10 +25,16 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
+        pip install pandas
+        pip insall pytrends
         
     - name: call file
       run: |
         python ${{ env.DEVOPS_DIR }}/google/googleSCRAPE/googleGET.py
+        exit()
+        more  ${{ env.DEVOPS_DIR }}/google/Yr2021 mth11 day24.txt
+        
+        
    #   python ${{ env.DEVOPS_DIR }}/google/googleSCRAPE/googlePARSE.py
         
  
