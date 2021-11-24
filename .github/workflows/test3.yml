@@ -31,7 +31,7 @@ jobs:
     - name: call file
       run: |
         python ${{ env.DEVOPS_DIR }}/google/googleSCRAPE/googleGET.py
-        ECHO %cd%
+        echo %cd%
         type "Yr2021 mth11 day22.txt"
         
         
