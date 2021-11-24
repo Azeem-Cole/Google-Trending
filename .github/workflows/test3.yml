@@ -26,4 +26,9 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         
+    - name: call file
+      run: |
+        python ${{ env.DEVOPS_DIR }}/google/googleSCRAPE/googleGET.py
+   #   python ${{ env.DEVOPS_DIR }}/google/googleSCRAPE/googlePARSE.py
+        
  
