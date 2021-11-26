@@ -45,7 +45,7 @@ jobs:
         git config --global user.email "azeemcole90@gmail.com"
         git add .
         git commit -m "Commit Message"
-        git push -u origin Azeem-Cole-patch-1
+        git push -u origin daily-grab
       # git init
       # git remote and origin https://github.com/Azeem-Cole/Google-Trending.git
       # git push -u origin Azeem-Cole-patch-1
