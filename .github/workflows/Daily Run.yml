@@ -2,11 +2,11 @@ name: Daily Run
 
 on:
   schedule:
-    - cron: '14 14 * * *'
-
+    - cron: '40 19 * * *'
+    
 env:
   DEVOPS_DIR: Google-Trending
-
+  
 jobs:
   GET:
     runs-on: windows-latest
@@ -50,17 +50,3 @@ jobs:
         $datestr = "yyyy"+$date.Year+" "+"mm"+$date.Month+" "+"dd"+$date.Day
         git commit -m $datestr
         git push -u origin daily-grab
-      # git init
-      # git remote and origin https://github.com/Azeem-Cole/Google-Trending.git
-      # git push -u origin Azeem-Cole-patch-1
-        
-      # $pwd
-      # echo ${{ env.DEVOPS_DIR }}
-      # gc ${{ env.DEVOPS_DIR }}/google/"Yr2020 mth11 day24"
-      # Get-ChildItem
-      # type "Yr2021 mth11 day22.txt"
-        
-        
-   #   python ${{ env.DEVOPS_DIR }}/google/googleSCRAPE/googlePARSE.py
-        
- 
