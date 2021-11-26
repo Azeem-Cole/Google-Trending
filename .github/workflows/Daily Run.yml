@@ -1,6 +1,8 @@
 name: Daily Run
 
-on: [push, workflow_dispatch]
+on:
+  schedule:
+    - cron: '0 14 * * *'
 
 env:
   DEVOPS_DIR: Google-Trending
@@ -46,7 +48,7 @@ jobs:
         git add .
         $date = Get-Date
         $datestr = "yyyy"+$date.Year+" "+"mm"+$date.Month+" "+"dd"+$date.Day
-        git commit -m datestr
+        git commit -m $datestr
         git push -u origin daily-grab
       # git init
       # git remote and origin https://github.com/Azeem-Cole/Google-Trending.git
