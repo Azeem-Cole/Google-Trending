@@ -41,6 +41,7 @@ jobs:
         Set-location ..
         Get-ChildItem
         
+        git -c user.email="azeemcole90@gmail.com"
         git commit
         git push
       # git init
