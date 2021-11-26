@@ -30,7 +30,6 @@ jobs:
         
     - name: call file
       run: |
-        git init
         python ${{ env.DEVOPS_DIR }}/google/googleSCRAPE/googleGET.py 
         python ${{ env.DEVOPS_DIR }}/google/googleSCRAPE/googlePARSE.py
         Set-location ${{ env.DEVOPS_DIR }}/google/googleSCRAPE
@@ -43,7 +42,8 @@ jobs:
         Get-ChildItem
         
         git commit
-        git push -u origin Azeem-Cole-patch-1
+        git push
+      # git init
       # git remote and origin https://github.com/Azeem-Cole/Google-Trending.git
       # git push -u origin Azeem-Cole-patch-1
         
