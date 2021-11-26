@@ -44,7 +44,9 @@ jobs:
         
         git config --global user.email "azeemcole70@gmail.com"
         git add .
-        git commit -m "Commit Message"
+        $date = Get-Date
+        $datestr = "yyyy"+$date.Year+" "+"mm"+$date.Month+" "+"dd"+$date.Day
+        git commit -m datestr
         git push -u origin daily-grab
       # git init
       # git remote and origin https://github.com/Azeem-Cole/Google-Trending.git
