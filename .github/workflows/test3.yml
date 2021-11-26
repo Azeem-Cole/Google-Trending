@@ -42,8 +42,10 @@ jobs:
         Set-location ..
         Get-ChildItem
         
-        git remote and origin https://github.com/Azeem-Cole/Google-Trending.git
+        git commit
         git push -u origin Azeem-Cole-patch-1
+      # git remote and origin https://github.com/Azeem-Cole/Google-Trending.git
+      # git push -u origin Azeem-Cole-patch-1
         
       # $pwd
       # echo ${{ env.DEVOPS_DIR }}
