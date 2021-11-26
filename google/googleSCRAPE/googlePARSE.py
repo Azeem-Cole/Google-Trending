@@ -1,10 +1,11 @@
+
 from collections import Counter
 from datetime import datetime
 
 allTrend = [[],[],[],[],[],[],[],[]]
 count = 0
 
-file = open("googleSCRAPE/googleTRENDING.txt", "r")
+file = open("Google-Trending/google/googleSCRAPE/googleTRENDING.txt", "r")
 
 for line in file:
     allTrend[count] = line.split(',')
@@ -51,7 +52,8 @@ finalDICT  = sorted(sortALL.items(), key=lambda x: x[1], reverse=True)
 
 localtime = datetime.now() 
 
-finalFILE = open( localtime.strftime("yyyy%Y mm%m dd%d"), "a")
+
+finalFILE = open( str ("Google-Trending/google/" +localtime.strftime("yyyy%Y mm%m dd%d") ), "w")
 
 finalFILE.write("Place".ljust(7) +"Score".ljust(7)+ "Term\n")
 
@@ -64,3 +66,4 @@ for key in finalDICT:
     count = count + 1
 
 finalFILE.close()
+
