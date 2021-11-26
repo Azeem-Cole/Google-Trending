@@ -52,7 +52,7 @@ finalDICT  = sorted(sortALL.items(), key=lambda x: x[1], reverse=True)
 localtime = datetime.now() 
 
 
-finalFILE = open( str ("Google-Trending/google/" +localtime.strftime("Yr%Y mth%m day%d") ), "w")
+finalFILE = open( str ("Google-Trending/google/" +localtime.strftime("yyyy%Y mm%m dd%d") ), "w")
 
 finalFILE.write("Place".ljust(7) +"Score".ljust(7)+ "Term\n")
 
