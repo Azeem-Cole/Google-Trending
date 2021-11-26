@@ -2,7 +2,7 @@ name: Daily Run
 
 on:
   schedule:
-    - cron: '55 19 * * *'
+    - cron: '0 8 * * *'
     
 env:
   DEVOPS_DIR: Google-Trending
