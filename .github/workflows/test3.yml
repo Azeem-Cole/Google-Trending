@@ -32,6 +32,9 @@ jobs:
       run: |
         python ${{ env.DEVOPS_DIR }}/google/googleSCRAPE/googleGET.py 
         python ${{ env.DEVOPS_DIR }}/google/googleSCRAPE/googlePARSE.py
+        
+    - name: push to git
+      run: |
         Set-location ${{ env.DEVOPS_DIR }}/google/googleSCRAPE
         Get-ChildItem
         
