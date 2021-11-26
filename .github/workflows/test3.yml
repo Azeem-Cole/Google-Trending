@@ -42,6 +42,7 @@ jobs:
         Get-ChildItem
         
         git config --global user.email "azeemcole90@gmail.com"
+        git add .
         git commit
         git push
       # git init
