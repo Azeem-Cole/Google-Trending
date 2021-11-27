@@ -6,6 +6,8 @@ on:
     
   workflow_dispatch:
   
+  push:
+  
   
 env:
   DEVOPS_DIR: Google-Trending
