@@ -3,7 +3,6 @@ name: Daily Run
 on:
   schedule:
     - cron: '*/6 * * * *'
-    
   workflow_dispatch:
   
   
