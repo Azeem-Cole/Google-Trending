@@ -1,8 +1,7 @@
 name: Daily Run
 
 on:
-  schedule:
-    - cron: '09 20 * * *'
+  push
     
 env:
   DEVOPS_DIR: Google-Trending
@@ -47,6 +46,6 @@ jobs:
         git config --global user.email "azeemcole70@gmail.com"
         git add .
         $date = Get-Date
-        $datestr = "yyyy"+$date.Year+" "+"mm"+$date.Month+" "+"dd"+$date.Day
+        $datestr = "This file was pulled on "+ $date
         git commit -m $datestr
         git push -u origin daily-grab
