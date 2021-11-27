@@ -46,6 +46,6 @@ jobs:
         git config --global user.email "azeemcole70@gmail.com"
         git add .
         $date = Get-Date
-        $datestr = "This file was pulled on "+ $date
+        $datestr = "This file was created on "+ $date
         git commit -m $datestr
         git push -u origin daily-grab
