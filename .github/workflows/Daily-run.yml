@@ -2,7 +2,7 @@ name: Daily Run
 
 on:
   schedule:
-    - cron: '*/6 * * * *'
+    - cron: '0 7 * * *'
   workflow_dispatch:
   
   
