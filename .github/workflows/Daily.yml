@@ -17,6 +17,7 @@ jobs:
     - name: checkout
       uses: actions/checkout@v2
       with:
+        ref: daily-grab
         repository: Azeem-Cole/Google-Trending
         token: ${{ secrets.GITHUB_TOKEN }}
         path: ${{ env.DEVOPS_DIR }}
