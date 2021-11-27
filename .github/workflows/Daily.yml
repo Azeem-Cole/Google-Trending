@@ -51,4 +51,4 @@ jobs:
         $date = Get-Date
         $datestr = "This file was created on "+ $date
         git commit -m $datestr
-        git push -u origin daily-grab
+        git push -u origin main
