@@ -1,9 +1,9 @@
 import pandas as pd
 from pytrends.request import TrendReq                      #module to request google trends
+import os
 
 
 pytrend = TrendReq()
-
 us = pytrend.trending_searches(pn='united_states')
 india = pytrend.trending_searches(pn='india')
 philippines = pytrend.trending_searches(pn='philippines')
@@ -14,22 +14,25 @@ canada = pytrend.trending_searches(pn='canada')
 australia = pytrend.trending_searches(pn='australia')
 
 
-allcountry = [us, india, philippines, nigeria, uk, germany, canada, australia]
-allcountrySTR = ["united states", "india", "philippines", "nigeria", "united kingdom", "germany", "canada", "australia"]
+allCountry = [us, india, philippines, nigeria, uk, germany, canada, australia]
+allCountrySTR = ["united states", "india", "philippines", "nigeria", "united kingdom", "germany", "canada", "australia"]
+
 
 count = 0 
-fileTREND = open("Google-Trending/google/googleSCRAPE/googleTRENDING.txt","w")
+current_dir = os.path.dirname(os.path.abspath(__file__))
+fileWithTrending = open(os.path.join(current_dir, "googleTRENDING.txt"), "w")
 
-for each in allcountry:
 
-    temp = allcountrySTR[count] + ", "
-    count = count + 1
+for each in allCountry:
+
+    temp = allCountrySTR[count] + ", "
 
     for every in each[0]:
         temp = temp + every + ", "
 
-    fileTREND.write(temp + "\n" )
-        
-fileTREND.close() 
+    fileWithTrending.write(temp + "\n" )
+    count = count + 1
+
+fileWithTrending.close() 
 
 print("completed")

@@ -31,10 +31,13 @@ jobs:
         python -m pip install --upgrade pip
         pip install pandas
         pip install pytrends
-        
-    - name: call file
+
+    - name: get trending data
       run: |
         python ${{ env.DEVOPS_DIR }}/google/googleSCRAPE/googleGET.py 
+        
+    - name: parse trending data
+      run: |
         python ${{ env.DEVOPS_DIR }}/google/googleSCRAPE/googlePARSE.py
         
         Set-location ${{ env.DEVOPS_DIR }}/google/googleSCRAPE

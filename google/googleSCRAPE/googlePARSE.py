@@ -1,11 +1,12 @@
-
+import os
 from collections import Counter
 from datetime import datetime
 
 allTrend = [[],[],[],[],[],[],[],[]]
 count = 0
 
-file = open("Google-Trending/google/googleSCRAPE/googleTRENDING.txt", "r")
+current_dir = os.path.dirname(os.path.abspath(__file__))
+file = open(os.path.join(current_dir, "googleTRENDING.txt"), "r")
 
 for line in file:
     allTrend[count] = line.split(',')
@@ -23,14 +24,14 @@ countryGERMANY = allTrend[5]
 countryCANADA = allTrend[6]
 countryAUSTRALIA = allTrend[7]
 
-dictUSA = dict(zip(countryUSA, range(162, 0, -1)))
-dictINDIA = dict(zip(countryINDIA, range(142, 0, -1)))
-dictPHILIPPINES = dict(zip(countryPHILIPPINES, range(122, 0, -1)))
-dictNIGERIA = dict(zip(countryNIGERIA, range(102, 0, -1)))
-dictUK = dict(zip(countryUK, range(82, 0, -1)))
-dictGERMANY = dict(zip(countryGERMANY, range(62, 0, -1)))
-dictCANADA = dict(zip(countryCANADA, range(42, 0, -1)))
-dictAUSTRALIA = dict(zip(countryAUSTRALIA, range(22, 0, -1)))
+dictUSA = dict(zip(countryUSA, zip(range(162, 0, -1), ["usa"] * len(countryUSA))))
+dictINDIA = dict(zip(countryINDIA, (range(142, 0, -1), "india")))
+dictPHILIPPINES = dict(zip(countryPHILIPPINES, (range(122, 0, -1), "philippines")))
+dictNIGERIA = dict(zip(countryNIGERIA, (range(102, 0, -1), "nigeria")))
+dictUK = dict(zip(countryUK, (range(82, 0, -1),  "uk")))
+dictGERMANY = dict(zip(countryGERMANY, (range(62, 0, -1), "germany")))
+dictCANADA = dict(zip(countryCANADA, (range(42, 0, -1), "Canada")))
+dictAUSTRALIA = dict(zip(countryAUSTRALIA, (range(22, 0, -1),  "Australia")))
 
 
 dictUSA.pop("united states")
@@ -42,28 +43,35 @@ dictGERMANY.pop("germany")
 dictCANADA.pop("canada")
 dictAUSTRALIA.pop("australia")
 
-dictALL = Counter(dictUSA) + Counter(dictINDIA) + Counter(dictPHILIPPINES)  + Counter(dictNIGERIA) + Counter(dictUK) + Counter(dictGERMANY) + Counter(dictCANADA) + Counter(dictAUSTRALIA) 
+# dictALL = Counter(dictUSA) + Counter(dictINDIA) + Counter(dictPHILIPPINES)  + Counter(dictNIGERIA) + Counter(dictUK) + Counter(dictGERMANY) + Counter(dictCANADA) + Counter(dictAUSTRALIA) 
 
-sortALL = {}
-for key, value in dictALL.items():
-    sortALL[key] = value
+print(dictUSA)
 
-finalDICT  = sorted(sortALL.items(), key=lambda x: x[1], reverse=True)
+# sortALL = {}
+# for key, value in dictALL.items():
+#     sortALL[key] = value
 
-localtime = datetime.now() 
+# print(dictUSA)
+
+# # print(Counter(dictINDIA) )
+
+# finalDICT  = sorted(sortALL.items(), key=lambda x: x[1], reverse=True)
+
+# localtime = datetime.now() 
 
 
-finalFILE = open( str ("Google-Trending/google/" +localtime.strftime("yyyy%Y mm%m dd%d") ), "w")
+# finalFILE = open( str ("./google/" +localtime.strftime("yyyy%Y mm%m dd%d.txt") ), "w")
 
-finalFILE.write("Place".ljust(7) +"Score".ljust(7)+ "Term\n")
+# finalFILE.write("Place".ljust(7) +"Score".ljust(7)+ "Term\n")
 
-count = 1
-for key in finalDICT:
+# count = 1
+# for key in finalDICT:
     
-    #finalFILE.write(((str(count).rjust(3) +", "+ key[0])) +.ljust(35)   +"\n")
-    finalFILE.write(((str(count).ljust(7) + (str(key[1]).ljust(7)) + " "+ key[0])) +"\n")
+#     #finalFILE.write(((str(count).rjust(3) +", "+ key[0])) +.ljust(35)   +"\n")
+#     finalFILE.write(((str(count).ljust(7) + (str(key[1]).ljust(7)) + " "+ key[0])) +"\n")
 
-    count = count + 1
+#     count = count + 1
 
-finalFILE.close()
+# finalFILE.close()
 
+print("completed")
